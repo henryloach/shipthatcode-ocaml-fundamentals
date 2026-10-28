@@ -1,1 +1,1 @@
-(* Use let () = print_endline ... *)
+let () = print_endline "Hello, OCaml!"
