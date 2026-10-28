@@ -1,14 +1,16 @@
-type shape =
-  | Circle of float
-  | Square of float
-
-let area s =
-  match s with
-  | Circle r -> 3.14 *. r *. r
-  | Square side -> side *. side
+let sum_list xs =
+  let rec aux acc = function 
+  | [] -> acc
+  | head :: tail -> aux (acc + head) tail
+  in 
+  aux 0 xs
+    
 
 let () =
-  let kind = read_line () in
-  let dim = float_of_string (read_line ()) in
-  let s = if kind = "circle" then Circle dim else Square dim in
-  Printf.printf "%.2f\n" (area s)
+  let n = int_of_string (read_line ()) in
+  let rec read_n k acc =
+    if k = 0 then List.rev acc
+    else read_n (k - 1) (int_of_string (read_line ()) :: acc)
+  in
+  let nums = read_n n [] in
+  Printf.printf "sum: %d\n" (sum_list nums)
