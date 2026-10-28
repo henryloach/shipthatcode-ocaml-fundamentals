@@ -1,13 +1,14 @@
-let rec sum lst =
-  match lst with
-  | [] -> 0
-  | x :: xs -> x + sum xs 
-  | _ -> 0
+type shape =
+  | Circle of float
+  | Square of float
+
+let area s =
+  match s with
+  | Circle r -> 3.14 *. r *. r
+  | Square side -> side *. side
 
 let () =
-  let nums =
-    read_line ()
-    |> String.split_on_char ' '
-    |> List.map int_of_string
-  in
-  Printf.printf "%d\n" (sum nums)
+  let kind = read_line () in
+  let dim = float_of_string (read_line ()) in
+  let s = if kind = "circle" then Circle dim else Square dim in
+  Printf.printf "%.2f\n" (area s)
