@@ -1,0 +1,46 @@
+{
+  "course": "ocaml-fundamentals",
+  "language": "ocaml",
+  "language_id": 65,
+  "entrypoint": "main.ml",
+  "version": 1,
+  "content_hash": "1923f10f319f7034",
+  "lessons": [
+    {
+      "slug": "hello-ocaml",
+      "tests_hash": "94e01efabec9"
+    },
+    {
+      "slug": "bindings",
+      "tests_hash": "825d6c6cb914"
+    },
+    {
+      "slug": "functions",
+      "tests_hash": "413e67ef4e7e"
+    },
+    {
+      "slug": "lambdas",
+      "tests_hash": "2ef2107d7b83"
+    },
+    {
+      "slug": "matching",
+      "tests_hash": "23470cc14626"
+    },
+    {
+      "slug": "variants",
+      "tests_hash": "b955187974d6"
+    },
+    {
+      "slug": "lists-recursion",
+      "tests_hash": "16128b506896"
+    },
+    {
+      "slug": "strings-printf",
+      "tests_hash": "fd1989f68ed8"
+    },
+    {
+      "slug": "reading-io",
+      "tests_hash": "c14198f9d053"
+    }
+  ]
+}
